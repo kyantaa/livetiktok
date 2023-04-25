@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>My Website</title>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+    <style>
+      body {
+  margin: 0;
+  padding: 0;
+}
+
+#video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#overlay {
+  position: absolute;
+  top: 0;
+  left: -136px;;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: 'Dancing Script', cursive;
+  font-size: 4em;
+  transform: scale(0.5) translate(0%, 0%);
+  color: white;
+}
+    </style>
+  </head>
+  <body>
+    <video id="video-background" autoplay muted loop>
+      <source src="https://static.moewalls.com/videos/preview/2021/hu-tao-butterfly-genshin-impact-preview.mp4" type="video/mp4">
+    </video>
+    <div id="overlay">
+        <p></p>Hello, Kyanta
+        <p id="time"></p>
+        </div>
+    </div>
+    <script>
+      function updateTime() {
+  const now = new Date();
+  const hours = now.getHours();
+  const minutes = now.getMinutes();
+  const time = hours.toString().padStart(2, '0') + ':' + minutes.toString().padStart(2, '0');
+  const date = now.toLocaleDateString('en-US', {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'}).replace(/,/g, '/');
+  document.getElementById('time').innerHTML = time + ' | ' + date;
+}
+
+setInterval(updateTime, 1000);
+    </script>
+  </body>
+</html>
