@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>My Website</title>
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <style>
       body {
   margin: 0;
@@ -37,17 +38,35 @@
   transform: scale(0.5) translate(0%, 0%);
   color: white;
 }
+#overlayy {
+  position: absolute;
+  top: -163px;
+  left: 356px;;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: 'Dancing Script', cursive;
+  font-size: 4em;
+  transform: scale(0.5) translate(0%, 0%);
+  color: white;
+}
+
     </style>
   </head>
   <body>
     <video id="video-background" autoplay muted loop>
       <source src="https://static.moewalls.com/videos/preview/2021/hu-tao-butterfly-genshin-impact-preview.mp4" type="video/mp4">
     </video>
-    <div id="overlay">
+     <div   id="overlay">
         <p></p>Hello, Kyanta
         <p id="time"></p>
         </div>
-    </div>
+    </div id="overlay">
     <script>
       function updateTime() {
   const now = new Date();
@@ -60,5 +79,10 @@
 
 setInterval(updateTime, 1000);
     </script>
+
+
+
+<a href="https://qthai25.github.io/kyanta/index.html" id="overlayy" target="_b">.</a>
+
   </body>
 </html>
