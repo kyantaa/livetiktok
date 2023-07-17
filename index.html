@@ -1,16 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
+    
     <meta charset="UTF-8">
     <title>Kyanta</title>
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <img id="video" src='hutao.gif' style='position:fixed;top:60% ;left:81%;z-index: -1;width:18%;height:40%;object-fit:cover;
+    ;z-index:9999'/>
+    <img id="video" src='kuru.gif' style='position:fixed;top:60% ;left:61%;z-index: -1;width:18%;height:40%;object-fit:cover;
+    ;z-index:9999'/>
+  
+   
+</script>
     <style>
       body {
   margin: 0;
   padding: 0;
 }
+#mahiru {
+  position: absolute;
+        top: 77%;
+        left: 0;
+        width: 200px;
 
+}
+#mahiru1 {
+  position: absolute;
+        top: 75%;
+        left: 52%;
+        width: 200px;
+
+}
+
+#mahiru2 {
+  position: absolute;
+        top: 19%;
+        left: 2%;
+        width: 200px;
+
+}
 #video-background {
   position: fixed;
   top: 0;
@@ -21,10 +50,19 @@
   object-fit: cover;
 }
 
+#video {
+  position: fixed;
+  top: 49%;
+  left: 140%;
+  z-index: -1;
+  width: 37%;
+  height: 100%;
+  object-fit: cover;
+}
 #overlay {
   position: absolute;
   top: 0;
-  left: -136px;;
+  left: -326px;;
   width: 100%;
   height: 100%;
   display: flex;
@@ -59,30 +97,40 @@
     </style>
   </head>
   <body>
+    <img id="mahiru" src="mahiru.png"   alt="" />
+    <img id="mahiru1" src="chibi.png"   alt="" />
+    <img id="mahiru2" src="noen.png"   alt="" />
     <video id="video-background" autoplay muted loop>
       <source src="https://static.moewalls.com/videos/preview/2023/hu-tao-butterflies-spirit-preview.mp4" type="video/mp4">
+     
     </video>
      <div   id="overlay">
-        <p></p>Hello, Kyanta
-        <p id="time"></p>
-        </div>
-    </div id="overlay">
-    <script>
-      function updateTime() {
-  const now = new Date();
-  const hours = now.getHours();
-  const minutes = now.getMinutes();
-  const time = hours.toString().padStart(2, '0') + ':' + minutes.toString().padStart(2, '0');
-  const date = now.toLocaleDateString('en-US', {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'}).replace(/,/g, '/');
-  document.getElementById('time').innerHTML = time + ' | ' + date;
+        <p></p>Hello I'm Kyanta<br><br> Have a nice day!
+       
+       
+       <p id="time"></p>
+      </div>
+  </div id="overlay">
+  <script>
+    function updateTime() {
+const now = new Date();
+const hours = now.getHours();
+const minutes = now.getMinutes();
+const time = hours.toString().padStart(2, '0') + ':' + minutes.toString().padStart(2, '0');
+const date = now.toLocaleDateString('en-US', {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'}).replace(/,/g, '/');
+document.getElementById('time').innerHTML = time + ' | ' + date;
 }
 
 setInterval(updateTime, 1000);
-    </script>
+  </script>
+
+
+     
+</script>
 
 
 
-<a href="https://qthai25.github.io/kyanta/index.html" id="overlayy" target="_b">.</a>
+
 
   </body>
 </html>
